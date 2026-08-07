@@ -1,0 +1,49 @@
+{
+  "name": "solace-cli",
+  "productName": "Solace",
+  "version": "0.1.0-beta",
+  "description": "Free AI coding agent for your terminal and desktop",
+  "private": true,
+  "bin": {
+    "solace": "bin/solace.cjs"
+  },
+  "author": "Solace",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brittanykemp160-rgb/solace-cli.git"
+  },
+  "homepage": "https://solace.dev",
+  "keywords": [
+    "ai",
+    "coding",
+    "assistant",
+    "terminal",
+    "cli",
+    "copilot",
+    "developer-tools",
+    "productivity"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "npm run build:cli && node bin/solace.cjs",
+    "dev": "npm run build:cli && node bin/solace.cjs",
+    "build": "vite build -c vite.cli.config.mts",
+    "build:cli": "vite build -c vite.cli.config.mts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "ink": "^6.0.0",
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  }
+}
